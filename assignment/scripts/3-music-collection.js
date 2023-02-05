@@ -7,7 +7,23 @@ console.log('***** Music Collection *****')
 //- Return the newly created object
 
 let collection = [];
+console.log(collection)
 
-function addToCollection() {
+/**
+ * 
+ * @param {string} title 
+ * @param {string} artist 
+ * @param {number} yearPublished 
+ */
 
+function addToCollection(title, artist, yearPublished) {
+    let newAlbum = {title, artist, yearPublished}
+    collection.push(newAlbum)
+    return newAlbum
 }
+
+    
+
+addToCollection('R.A.M (Random Access Memories)', 'Daft Punk', 2013)
+
+console.table(collection)

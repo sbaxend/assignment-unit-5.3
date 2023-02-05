@@ -7,7 +7,7 @@ console.log('***** Music Collection *****')
 //- Return the newly created object
 
 let collection = [];
-console.log(collection)
+
 
 /**
  * 
@@ -22,8 +22,20 @@ function addToCollection(title, artist, yearPublished) {
     return newAlbum
 }
 
-    
+//- Test the `addToCollection` function:
+//- Add 6 albums to your collection. Aim to have a mix of both same and 
+//different artists and published years. 
+//(Feel free to share your musical interests, or make stuff up. 
+//Totally fine either way.)
+//- Console.log each album as added using the returned value.
+//- After all are added, console.log the `collection` array.   
 
-addToCollection('R.A.M (Random Access Memories)', 'Daft Punk', 2013)
+console.log(addToCollection('R.A.M (Random Access Memories)', 'Daft Punk', 2013));
+console.log(addToCollection('In Rainbows', 'Radiohead', 2007));
+console.log(addToCollection('Demon Days', 'Gorillaz', 2005));
+console.log(addToCollection('Aquemini', 'Outkast', 1998));
+console.log(addToCollection('ForEver', 'Jungle', 2018));
+console.log(addToCollection('DAMN', 'Kendrick Lamar', 2017));
+console.log(addToCollection('good kid, m.A.A.d city', 'Kendrick Lamar', 2012));
+console.table(collection);
 
-console.table(collection)

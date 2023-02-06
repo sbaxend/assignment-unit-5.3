@@ -52,4 +52,41 @@ function showCollection(array) {
       console.log(`${album.title} by ${album.artist}, published in ${album.yearPublished}`);
     }
   };
-console.log(showCollection(collection));
+showCollection(collection);
+
+// Add a function named `findByArtist`. This function should:
+// - Take in `artist` (a string) parameter
+// - Create an array to hold any results, empty to start
+// - Loop through the `collection` and add any objects with a matching 
+//artist to the array.
+// - Return the array with the matching results. If no results are found, 
+//return an empty array.
+
+// - Test the `findByArtist` function. Make sure to test with an artist you know 
+//is in the collection, as well as an artist you know is not in your collection. 
+//Check that for artists with multiple matches, all are found.
+
+/**
+ * 
+ * @param {string} artist 
+ */
+
+function findByArtist(artist) {
+let results = [];
+for (let album of collection) {
+    if (album.artist === artist) {
+        results.push(album);
+        console.log("Here are the results for", artist)
+    }
+}
+if (results.length === 0) {
+    console.log("Here are the results for", artist, results);
+} else {
+    console.log(results);
+}
+
+}
+
+findByArtist('Daft Punk');
+findByArtist('Billy Joel');
+findByArtist('Kendrick Lamar')
